@@ -142,6 +142,8 @@ const resolvers = {
               message: 'Post not found',
             };
           }
+
+          await db.Comment.destroy({ where: { postId: args.id } });
   
           await post.destroy();
           return {
