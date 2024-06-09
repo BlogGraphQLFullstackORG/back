@@ -5,8 +5,8 @@ const {comparePassword} = require("../helpers/comparePassword");
 
 
 module.exports = {
-  login: async ({ username, password }) => {
-    const user = await db.User.findOne({ where: { username } });
+  login: async ({ email, password }) => {
+    const user = await db.User.findOne({ where: { email } });
     if (!user) {
         throw new Error('No user found');
     }
