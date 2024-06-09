@@ -48,7 +48,7 @@ const typeDefs = `
             getComments(postId: ID!): [ReturnComment]!
         }
         type Mutation {
-            login(username: String!, password: String!): ReturnUser!
+            login(email: String!, password: String!): ReturnUser!
             saveUser(username: String!, email: String!, password: String!): ReturnUser!
             saveComment(content: String!, userId: ID!, postId: ID!): Comment!
             savePost(title: String!, content: String!, userId: ID!, image: String!): Post!
